@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/bares', function () {
     return view('bares'); // Esto devuelve la vista de bares.blade.php
 })->name('bares');
+
+
 Route::get('/restaurantes', function () {
     return view('restaurantes'); // Esto devuelve la vista de restaurantes.blade.php
 })->name('restaurantes');
@@ -48,3 +50,8 @@ Route::get('/restaurantes', function () {
 Route::get('/bares', function () {
     return view('bares');
 })->name('bares');
+
+
+use App\Http\Controllers\ContactoController;
+
+Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto');
